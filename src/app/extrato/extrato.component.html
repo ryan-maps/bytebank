@@ -1,0 +1,24 @@
+<h1>Extrato: </h1>
+<div *ngIf="transferencias.length; else listaVazia">
+    <h3>Transferências:</h3>
+    <table class="tabela">
+        <thead class="table__cabecalho">
+            <th class="tabela__cabecalho__conteudo">ID</th>
+            <th class="tabela__cabecalho__conteudo">Data</th>
+            <th class="tabela__cabecalho__conteudo">Valor</th>
+            <th class="tabela__cabecalho__conteudo">Destino</th>
+        </thead>
+        <tbody>
+            <tr class="tabela__linha" *ngFor="let transferencia of transferencias;index as i;">
+                <td class="tabela__conteudo">Id da Transferência: {{transferencia?.id}}</td>
+                <td class="tabela__conteudo">Data da Transferência: {{transferencia?.data | date: 'short'}}</td>
+                <td class="tabela__conteudo">Valor da Transferência: {{transferencia?.valor | currency}}</td>
+                <td class="tabela__conteudo">Destino da Transferência: {{transferencia?.destino}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<ng-template #listaVazia>
+    <p>Sem transferências</p>
+</ng-template>
+<h3>Casas Decimais do Extrato: {{decimalPlaces}}</h3>

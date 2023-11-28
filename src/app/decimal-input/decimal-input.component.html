@@ -1,0 +1,7 @@
+<p>Selecione a quantidade de casas decimais do Extrato</p>
+<select name="decimal-places" id="decimal-places" [(ngModel)]="decimalPlaces" (change)="handleSelection($event)">
+    <option value="2" [ngValue]="2">2</option>
+    <option value="3" [ngValue]="3">3</option>
+    <option value="4" [ngValue]="4">4</option>
+</select>
+<p>Quantidade selecionada de Casas decimais: {{decimalPlaces}}</p>

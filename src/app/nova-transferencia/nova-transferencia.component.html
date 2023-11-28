@@ -5,19 +5,22 @@
   
       <div class="form-field">
         <label class="form-field_label" for="valor">Valor</label>
-        <input class="form-field_input" id="valor" type="text" [(ngModel)]="valor" name="valor">
+        <input class="form-field_input" id="valor" type="number" [(ngModel)]="transferencia.valor" name="valor">
       </div>
   
       <div class="form-field">
         <label class="form-field_label" for="destino">Destino</label>
-        <input class="form-field_input" id="valor" type="text" [(ngModel)]="destino" name="destino">
+        <input class="form-field_input" id="valor" type="text" [(ngModel)]="transferencia.destino" name="destino">
       </div>
   
       <div class="botao-wrapper">
       <button class="botao">Transferir</button>
     </div>
-    <h3>{{destino}}</h3>
-    <h3>{{valor}}</h3>
+    <h1>Dados da Nova Transferência: </h1>
+    <h3>Valor: {{transferencia.valor}}</h3>
+    <h3>Destino: {{transferencia.destino}}</h3>
+    
+    <hr>
     </form>
   </section>
   
